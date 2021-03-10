@@ -4,10 +4,9 @@
 float compute_power(const float *x, unsigned int N){
    float sum =0; 
     for (int i = 0; i<N; i++){
-        sum = sum + x[i]*x[i]; 
+        sum += x[i]*x[i]; 
     }
-    float power = 10 * log10(sum/N); 
-    return power; 
+    return 10 * log10(sum/N); 
 }
 
 float compute_am(const float *x, unsigned int N){
